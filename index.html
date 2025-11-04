@@ -12,85 +12,102 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #f1f1f1;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
             text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #e94560;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #222;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            color: #f1f1f1;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
         }
 
-        .games {
+        .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin-bottom: 3rem;
         }
 
-        .game-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(233, 69, 96, 0.3);
-            border-radius: 12px;
+        .project-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
             padding: 2rem;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             text-decoration: none;
             color: inherit;
             display: block;
         }
 
-        .game-card:hover {
-            transform: translateY(-5px);
-            border-color: #e94560;
-            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: #999;
         }
 
-        .game-card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #e94560;
+        .project-card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #222;
         }
 
-        .game-card p {
-            font-size: 1rem;
+        .project-card p {
+            font-size: 0.95rem;
             line-height: 1.6;
-            opacity: 0.9;
+            color: #555;
             margin-bottom: 1rem;
         }
 
-        .badge {
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
             display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: rgba(233, 69, 96, 0.2);
-            border: 1px solid #e94560;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            color: #666;
         }
 
         footer {
-            margin-top: 4rem;
-            opacity: 0.7;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            color: #999;
             font-size: 0.9rem;
         }
 
@@ -100,32 +117,44 @@
             }
 
             .subtitle {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
-            .games {
+            .projects {
                 grid-template-columns: 1fr;
+            }
+
+            header {
+                margin-bottom: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Arthur van Acker</h1>
-        <p class="subtitle">Developer</p>
+        <header>
+            <h1>Arthur van Acker</h1>
+            <p class="subtitle">Developer</p>
+        </header>
 
-        <div class="games">
-            <a href="https://barrel-blaster.vanacker.io" class="game-card">
-                <h2>🎮 Barrel Blaster</h2>
-                <p>Classic arcade action - Desktop version with keyboard controls</p>
-                <span class="badge">Desktop</span>
+        <div class="projects">
+            <a href="https://barrel-blaster.vanacker.io" class="project-card">
+                <h2>Barrel Blaster</h2>
+                <p>Classic arcade action game with keyboard controls. Desktop-optimized version featuring retro gameplay mechanics.</p>
+                <div class="tags">
+                    <span class="tag">Desktop</span>
+                    <span class="tag">JavaScript</span>
+                </div>
             </a>
 
-            <a href="https://barrel-blaster-mobile.vanacker.io" class="game-card">
-                <h2>📱 Barrel Blaster Mobile</h2>
-                <p>Mobile-optimized PWA with touch controls and offline support</p>
-                <span class="badge">PWA</span>
-                <span class="badge">Mobile</span>
+            <a href="https://barrel-blaster-mobile.vanacker.io" class="project-card">
+                <h2>Barrel Blaster Mobile</h2>
+                <p>Mobile-optimized Progressive Web App with touch controls, offline support, and installable experience.</p>
+                <div class="tags">
+                    <span class="tag">PWA</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Offline</span>
+                </div>
             </a>
         </div>
 
