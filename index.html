@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur van Acker - Game Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #f1f1f1;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: #f1f1f1;
+            opacity: 0.9;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(233, 69, 96, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #e94560;
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+
+        .game-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #e94560;
+        }
+
+        .game-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(233, 69, 96, 0.2);
+            border: 1px solid #e94560;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .games {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arthur van Acker</h1>
+        <p class="subtitle">Game Developer</p>
+
+        <div class="games">
+            <a href="https://barrel-blaster.vanacker.io" class="game-card">
+                <h2>🎮 Barrel Blaster</h2>
+                <p>Classic arcade action - Desktop version with keyboard controls</p>
+                <span class="badge">Desktop</span>
+            </a>
+
+            <a href="https://barrel-blaster-mobile.vanacker.io" class="game-card">
+                <h2>📱 Barrel Blaster Mobile</h2>
+                <p>Mobile-optimized PWA with touch controls and offline support</p>
+                <span class="badge">PWA</span>
+                <span class="badge">Mobile</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Arthur van Acker</p>
+        </footer>
+    </div>
+</body>
+</html>
